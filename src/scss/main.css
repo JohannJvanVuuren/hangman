@@ -25,6 +25,7 @@ body {
   border: 1rem solid #FFFFFF;
 }
 
+/* Colour palette */
 /* Styling for the header box's text */
 .header-container h1 {
   font-size: 3.5rem;
@@ -46,22 +47,24 @@ body {
   font-weight: 700;
 }
 
-.guess-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
 .guess-container label {
-  display: block;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
 }
 .guess-container .guess {
-  font-size: 3rem;
-  width: 9rem;
-  text-align: center;
+  font-family: "Rock Salt", Arial, sans-serif;
+  font-size: 2rem;
+  color: #000014;
+}
+.guess-container .guess::placeholder {
+  color: #000014;
+}
+
+/* Colour palette */
+.guess-container .guess {
+  border: none;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, #9D9DFF, #1F1FBC);
 }
 
 /* Colour palette */
@@ -180,6 +183,21 @@ button {
 }
 .letters {
   display: flex;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.guess-container label {
+  display: block;
+  text-align: center;
+}
+.guess-container .guess {
+  width: 9rem;
+  text-align: center;
 }
 
 .header-container {

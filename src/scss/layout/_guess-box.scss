@@ -1,0 +1,17 @@
+.guess-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    display: block;
+    text-align: center;
+  }
+
+  .guess {
+    width: 9rem;
+    text-align: center;
+  }
+}

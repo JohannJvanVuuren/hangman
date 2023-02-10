@@ -1,3 +1,5 @@
+@import '../abstract/variables';
+
 /* Styling for the header box's text */
 .header-container {
 
@@ -24,5 +26,24 @@
 
   button {
     font-weight: 700;
+  }
+}
+
+.guess-container {
+
+  label {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .guess {
+    font-family: "Rock Salt", Arial, sans-serif;
+    font-size: 2rem;
+    color: $dark-blue;
+
+    &::placeholder {
+      color: $dark-blue;
+    }
+
   }
 }

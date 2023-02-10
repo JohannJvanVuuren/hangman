@@ -1,20 +1,10 @@
+@import '../abstract/variables';
+
 .guess-container {
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  label {
-    display: block;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
   .guess {
-    font-size: 3rem;
-    width: 9rem;
-    text-align: center;
+   border: none;
+    border-radius: 1.5rem;
+    background: linear-gradient(145deg, $light-blue, $middle-blue);
   }
 }

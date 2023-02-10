@@ -10,8 +10,7 @@ import {SubmitGuess, ResetButton} from "./components/PlayButtons";
 
 export const App = () => {
 
-    const time = new Date();
-    time.setSeconds()
+
 
     return (
         <div className={"app-wrapper"}>
@@ -22,7 +21,9 @@ export const App = () => {
                 wordList={wordList}
             />
             <ResetButton/>
-            <Input/>
+            <Input
+                placeholderText={"guess"}
+            />
             <SubmitGuess/>
         </div>
     );
