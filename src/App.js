@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/main.css';
+import {Header} from "./components/Header";
+import goldenStrip from '../src/resources/images/pngegg.png'
+import {Clock} from "./components/Clock";
+import {Word} from "./components/Word";
+import {wordList} from "./resources/wordList";
+import {Input} from "./components/input";
+import {SubmitGuess, ResetButton} from "./components/PlayButtons";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export const App = () => {
+
+    const time = new Date();
+    time.setSeconds()
+
+    return (
+        <div className={"app-wrapper"}>
+            <img className={"decorator"} src={goldenStrip} alt={"Golden Strip Decorator"}/>
+            <Header/>
+            <Clock/>
+            <Word
+                wordList={wordList}
+            />
+            <ResetButton/>
+            <Input/>
+            <SubmitGuess/>
+        </div>
+    );
 }
 
-export default App;
+

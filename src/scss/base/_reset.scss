@@ -1,0 +1,23 @@
+@import '../abstract/variables';
+
+/* Global reset */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting global font-size to 1 rem = 16px for ease of use */
+html {
+  font-size: 62.5%;
+}
+
+/* Setting global styles on the body element */
+body {
+  background: linear-gradient(to bottom right, $dark-blue, $middle-blue, $light-blue);
+  font-family: "Rock Salt", Arial, sans-serif;
+  height: 100vh;
+  border: 1rem solid $white;
+}

@@ -1,0 +1,91 @@
+/* Laying down the grid that houses the rest of the components. Named template areas are used so that it
+ is easier to place specific components in specific spots.*/
+.app-wrapper {
+  display: grid;
+  width: 100%;
+  height: 97.5vh;
+  grid-template-areas:
+    "decorator header clock"
+    "word word word"
+    "emptyCell3 hangman emptyCell4"
+    "reset guess submitGuess";
+  grid-template-rows: 1fr 5.5rem 1fr 12rem;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* Spacing and aligning the header-container with the title in it  */
+  .header-container {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+  /* Spacing and aligning the hangman classical image */
+  .decorator {
+    grid-area:  decorator;
+    height: 10rem;
+    width: 15rem;
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
+  }
+
+  /* Spacing and aligning the clock container that houses the clock and its control buttons */
+  .clock-container {
+    grid-area: clock;
+    height: 10rem;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .word {
+    grid-area: word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+
+    .letters {
+      padding: 0 1rem;
+    }
+  }
+
+  .reset-game {
+    grid-area: reset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .guess-container {
+    grid-area: guess;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .submit-guess {
+    grid-area: submitGuess;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+}
+
+/* A media query to make the page responsive by changing the layout from grid to flexbox below
+ widths of 570px. Components will then be stacked on top of each other.*/
+@media (max-width: 570px) {
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.letters {
+  display: flex;
+
+}
+

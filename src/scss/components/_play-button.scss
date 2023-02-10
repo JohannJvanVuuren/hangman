@@ -1,0 +1,25 @@
+@import '../abstract/variables';
+
+.play-button {
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  background: linear-gradient(145deg, $light-grey, $darker-grey);
+
+  border: none;
+}
+
+.reset-button {
+  box-shadow: 1rem 1rem 3rem $dark-blue,
+  -1rem -1rem 3rem $middle-blue;
+}
+
+.submit-guess_button {
+  box-shadow: 1rem 1rem 3rem $middle-blue,
+  -1rem -1rem 3rem $light-blue;
+}
+
+.btn-clock {
+  box-shadow: 5px 5px 15px $dark-blue,
+  -2px -2px 6px $light-blue;
+}
+

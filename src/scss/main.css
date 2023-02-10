@@ -1,0 +1,194 @@
+/* Import of the Google Font "Lato" */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rock+Salt&display=swap");
+/* Import of the SCSS style modules */
+/* Colour palette */
+/* Colour palette */
+/* Global reset */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting global font-size to 1 rem = 16px for ease of use */
+html {
+  font-size: 62.5%;
+}
+
+/* Setting global styles on the body element */
+body {
+  background: linear-gradient(to bottom right, #000014, #1F1FBC, #9D9DFF);
+  font-family: "Rock Salt", Arial, sans-serif;
+  height: 100vh;
+  border: 1rem solid #FFFFFF;
+}
+
+/* Styling for the header box's text */
+.header-container h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+.header-container p {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.clock-container h2 {
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: "Lato", Arial, sans-serif;
+  color: #C0C0C0;
+}
+.clock-container button {
+  font-weight: 700;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.guess-container label {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.guess-container .guess {
+  font-size: 3rem;
+  width: 9rem;
+  text-align: center;
+}
+
+/* Colour palette */
+/* Styling for the text header's container */
+.header-container,
+button {
+  border-radius: 2rem;
+  background: linear-gradient(145deg, #CDCDCD, #ADADAD);
+  box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
+  border: none;
+}
+
+/* Styling of the clock container */
+.clock-container {
+  display: flex;
+  flex-direction: column;
+}
+.clock-container h2 {
+  text-align: center;
+}
+.clock-container button {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Colour palette */
+.play-button {
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  background: linear-gradient(145deg, #CDCDCD, #ADADAD);
+  border: none;
+}
+
+.reset-button {
+  box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
+}
+
+.submit-guess_button {
+  box-shadow: 1rem 1rem 3rem #1F1FBC, -1rem -1rem 3rem #9D9DFF;
+}
+
+.btn-clock {
+  box-shadow: 5px 5px 15px #000014, -2px -2px 6px #9D9DFF;
+}
+
+/* Laying down the grid that houses the rest of the components. Named template areas are used so that it
+ is easier to place specific components in specific spots.*/
+.app-wrapper {
+  display: grid;
+  width: 100%;
+  height: 97.5vh;
+  grid-template-areas: "decorator header clock" "word word word" "emptyCell3 hangman emptyCell4" "reset guess submitGuess";
+  grid-template-rows: 1fr 5.5rem 1fr 12rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Spacing and aligning the header-container with the title in it  */
+  /* Spacing and aligning the hangman classical image */
+  /* Spacing and aligning the clock container that houses the clock and its control buttons */
+}
+.app-wrapper .header-container {
+  grid-area: header;
+  justify-self: center;
+  align-self: center;
+  margin-top: 2rem;
+}
+.app-wrapper .decorator {
+  grid-area: decorator;
+  height: 10rem;
+  width: 15rem;
+  align-self: center;
+  justify-self: center;
+  margin-top: 2rem;
+}
+.app-wrapper .clock-container {
+  grid-area: clock;
+  height: 10rem;
+  width: auto;
+  align-self: center;
+  justify-self: center;
+}
+.app-wrapper .word {
+  grid-area: word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+.app-wrapper .word .letters {
+  padding: 0 1rem;
+}
+.app-wrapper .reset-game {
+  grid-area: reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-wrapper .guess-container {
+  grid-area: guess;
+  align-self: center;
+  justify-self: center;
+}
+.app-wrapper .submit-guess {
+  grid-area: submitGuess;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* A media query to make the page responsive by changing the layout from grid to flexbox below
+ widths of 570px. Components will then be stacked on top of each other.*/
+@media (max-width: 570px) {
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.letters {
+  display: flex;
+}
+
+.header-container {
+  width: 25rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

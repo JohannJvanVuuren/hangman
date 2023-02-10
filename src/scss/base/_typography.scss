@@ -1,0 +1,28 @@
+/* Styling for the header box's text */
+.header-container {
+
+  h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+
+  }
+
+  p {
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+}
+
+.clock-container {
+  h2 {
+    font-size: 5rem;
+    font-weight: 100;
+    font-family: 'Lato', Arial, sans-serif;
+    color: $silver;
+  }
+
+  button {
+    font-weight: 700;
+  }
+}
