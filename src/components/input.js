@@ -1,15 +1,15 @@
 import '../scss/main.css';
 
-export const Input = ({placeholderText}) => {
+export const Input = ({placeHolderText}) => {
 
-    const removePlaceholderHandler = () => {
 
-    }
+
 
     return (
         <div className={"guess-container"}>
+
             <label>Guess a letter below</label>
-            <input className={"guess"} type={"text"} placeholder={placeholderText} onClick={removePlaceholderHandler}/>
+            <input className={"guess"} type={"text"} placeholder={placeHolderText} />
         </div>
     )
 }

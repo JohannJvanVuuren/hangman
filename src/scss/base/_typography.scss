@@ -26,6 +26,8 @@
 
   button {
     font-weight: 700;
+    font-family: "Rock Salt", Arial, sans-serif;
+    font-size: 1rem;
   }
 }
 
@@ -42,8 +44,13 @@
     color: $dark-blue;
 
     &::placeholder {
-      color: $dark-blue;
+      color: $light-blue;
     }
 
   }
+}
+
+.play-button {
+  font-family: "Rock Salt", Arial, sans-serif;
+  font-weight: bold;
 }

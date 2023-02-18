@@ -1,0 +1,11 @@
+@import '../abstract/variables';
+
+
+.letters {
+  border: 0.6px dotted $dark-blue;
+  margin: 0 0.5rem;
+  color: $dark-blue;
+  border-radius: 5px;
+  font-size: 2rem;
+  padding: 2rem;
+}

@@ -2,7 +2,7 @@ import '../scss/main.css';
 import {useStopwatch} from "react-timer-hook";
 
 
-export const Clock = () => {
+export const Clock = ({onResetClock}) => {
 
     const {
         seconds,
@@ -10,15 +10,18 @@ export const Clock = () => {
         hours,
         start,
         pause,
-    } = useStopwatch({autoStart: true});
+        reset,
+    } = useStopwatch({autoStart: false});
 
 
-    return (
+
+        return (
         <div className={"clock-container"}>
             <h2><span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span></h2>
             <div className={"btn-container"} >
-                <button className={"btn-clock"} onClick={pause}>Pause Game</button>
-                <button className={"btn-clock"} onClick={start}>Resume Game</button>
+                <button className={"btn-clock"} onClick={pause}>Pause Timer</button>
+                <button className={"btn-clock"} onClick={start}>Start Timer</button>
+                <button className={"btn-clock"} onClick={reset}>Reset Timer</button>
             </div>
         </div>
     )

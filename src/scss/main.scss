@@ -9,8 +9,11 @@
 @import 'base/typography';
 
 @import 'components/guess-box';
+@import 'components/hangman-image';
 @import 'components/header';
 @import 'components/play-button';
+@import 'components/score';
+@import 'components/word';
 
 @import 'layout/grid';
 @import 'layout/guess-box';

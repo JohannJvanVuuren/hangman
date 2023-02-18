@@ -1,16 +1,55 @@
 import './scss/main.css';
+import {useState, useEffect} from 'react';
+import goldenStrip from "./resources/images/pngegg.png";
 import {Header} from "./components/Header";
-import goldenStrip from '../src/resources/images/pngegg.png'
 import {Clock} from "./components/Clock";
 import {Word} from "./components/Word";
 import {wordList} from "./resources/wordList";
+import {StartResetButton, GetScore} from "./components/PlayButtons";
 import {Input} from "./components/input";
-import {SubmitGuess, ResetButton} from "./components/PlayButtons";
+import {HangmanImage} from "./components/HangmanImage";
+import {IncorrectGuesses} from "./components/IncorrectGuesses";
+import {WinOrLoseMessage} from "./components/WinOrLoseMessage";
 
+const randomWord = wordList[Math.floor(Math.random() * wordList.length) + 1];
 
 export const App = () => {
 
+    const [isGameActive, setIsGameActive] = useState(true);
+    const [correctGuesses, setCorrectGuesses] = useState([]);
+    const [incorrectGuesses, setIncorrectGuesses] = useState([]);
 
+
+
+    useEffect(() => {
+        const inputKeydownHandler = (e) => {
+            const keycodeEntered = e.keyCode;
+            const letterEntered = e.key;
+
+            if (isGameActive && keycodeEntered >= 65 && keycodeEntered <= 90) {
+                const testLetter = letterEntered.toLowerCase();
+                if (randomWord.includes(testLetter)) {
+                    if (!correctGuesses.includes(testLetter)) {
+                        setCorrectGuesses(prevState => [...prevState, testLetter]);
+                    }
+                } else {
+                    if (!incorrectGuesses.includes(testLetter)) {
+                        setIncorrectGuesses(prevState => [...prevState, testLetter])
+                    }
+                }
+            }
+
+
+        }
+
+        window.addEventListener('keydown', inputKeydownHandler);
+
+        /* To ensure that there is only one event listener active during each rendering of the app. */
+        return () => window.removeEventListener('keydown', inputKeydownHandler);
+
+                /* Declaration of dependencies to ensure this useEffect is not called everytime the app renders.
+                *  This useEffect will only be called when these dependencies get updated. */
+    }, [correctGuesses, incorrectGuesses, isGameActive]);
 
     return (
         <div className={"app-wrapper"}>
@@ -18,15 +57,28 @@ export const App = () => {
             <Header/>
             <Clock/>
             <Word
-                wordList={wordList}
+                correctGuesses={correctGuesses}
+                randomWord={randomWord}
             />
-            <ResetButton/>
+            <WinOrLoseMessage
+                correctGuesses={correctGuesses}
+                incorrectGuesses={incorrectGuesses}
+                randomWord={randomWord}
+                setGameIsActive={setIsGameActive()}
+            />
+            <HangmanImage
+                inCorrectGuesses={incorrectGuesses}
+            />
+            <IncorrectGuesses
+                incorrectGuesses={incorrectGuesses}
+            />
+            <StartResetButton
+            />
             <Input
-                placeholderText={"guess"}
+                placeHolderText={"Guess"}
             />
-            <SubmitGuess/>
+            <GetScore/>
         </div>
     );
+
 }
-
-

@@ -1,17 +1,23 @@
 import '../scss/main.css';
 
-export const ResetButton = () => {
+export const StartResetButton = ({onStartResetGame}) => {
+
     return (
         <div className={"reset-game"}>
-            <button className={"play-button reset-button"} type={"button"}>Reset Game</button>
+            <button
+                className={"play-button reset-button"}
+                type={"button"}
+                onClick={onStartResetGame}
+            >Start / Reset Game
+            </button>
         </div>
     )
 }
 
-export const SubmitGuess = () => {
+export const GetScore = () => {
     return (
-        <div className={"submit-guess"}>
-            <button className={"play-button submit-guess_button"} type={"button"}>Get Score</button>
+        <div className={"get-score"}>
+            <button className={"play-button get-score-button"} type={"button"}>Get Score</button>
         </div>
     )
 }

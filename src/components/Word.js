@@ -1,20 +1,21 @@
 import '../scss/main.css'
 
-export const Word = ({wordList}) => {
-
-    const lettersArray = wordList[Math.floor(Math.random() * wordList.length) + 1].split("");
-    const letterBoxes = lettersArray.map((letter) =>
-
-        <h1 className={"letters"}>{letter}</h1>
-    )
+export const Word = ({randomWord, correctGuesses}) => {
 
 
 
     return (
         <div className={"word"}>
-            {letterBoxes}
+            {randomWord.split('').map((letter, index) => {
+                return (
+                    <h1 className={"letters"} key={index}>
+                        {correctGuesses.includes(letter) ? letter : ''}
+                    </h1>
+                )
+            })}
         </div>
     )
+
 
 
 

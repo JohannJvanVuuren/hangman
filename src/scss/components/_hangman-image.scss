@@ -1,0 +1,12 @@
+@import '../abstract/variables';
+
+.hangman-image {
+  img {
+    border: 5px solid $middle-blue;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 3rem $middle-blue,
+    -1rem -1rem 3rem $mid-light-blue;
+    height: auto;
+    width: auto;
+  }
+}
