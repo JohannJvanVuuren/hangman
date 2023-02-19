@@ -13,11 +13,3 @@ export const StartResetButton = ({onStartResetGame}) => {
         </div>
     )
 }
-
-export const GetScore = () => {
-    return (
-        <div className={"get-score"}>
-            <button className={"play-button get-score-button"} type={"button"}>Get Score</button>
-        </div>
-    )
-}

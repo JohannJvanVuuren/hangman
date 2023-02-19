@@ -1,0 +1,18 @@
+@import '../abstract/variables';
+
+.win-or-lose-wrapper {
+
+  h2,
+  h3{
+    color: $maroon;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+}

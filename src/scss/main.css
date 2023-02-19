@@ -70,10 +70,13 @@ body {
 }
 
 /* Colour palette */
+.guess-container h2 {
+  color: #000014;
+}
 .guess-container .guess {
-  border: none;
   border-radius: 1.5rem;
   background: linear-gradient(145deg, #9D9DFF, #1F1FBC);
+  height: 5rem;
 }
 
 /* Colour palette */
@@ -111,8 +114,7 @@ button {
 
 /* Colour palette */
 .play-button {
-  padding: 2.5rem 0;
-  width: 30rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 2rem;
   background: linear-gradient(145deg, #CDCDCD, #ADADAD);
   border: none;
@@ -122,23 +124,32 @@ button {
   box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
 }
 
-.submit-guess_button {
-  box-shadow: 1rem 1rem 3rem #1F1FBC, -1rem -1rem 3rem #9D9DFF;
-}
-
 .btn-clock {
   box-shadow: 5px 5px 15px #000014, -2px -2px 6px #9D9DFF;
 }
 
+.digits {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
 /* Colour palette */
-.score-wrapper h1 {
-  color: #800000;
+.win-or-lose-wrapper h2,
+.win-or-lose-wrapper h3 {
+  color: #310101;
+}
+.win-or-lose-wrapper h2 {
+  font-size: 3rem;
+}
+.win-or-lose-wrapper h3 {
+  font-size: 2rem;
 }
 
 /* Colour palette */
 .letters {
   border: 0.6px dotted #000014;
   margin: 0 0.5rem;
+  height: 4rem;
   color: #000014;
   border-radius: 5px;
   font-size: 2rem;
@@ -151,12 +162,11 @@ button {
   display: grid;
   width: 100vw;
   height: 95vh;
-  grid-template-areas: "decorator header clock" "word word word" "score hangman incorrectGuesses" "getScore guess reset";
+  grid-template-areas: "decorator header stopwatch" "word word word" "score hangman incorrectGuesses" "reset guess emptyCell";
   grid-template-rows: 1fr 5.5rem 1fr 12rem;
   grid-template-columns: 1fr 1fr 1fr;
   /* Spacing and aligning the header-container with the title in it  */
   /* Spacing and aligning the hangman classical image */
-  /* Spacing and aligning the clock container that houses the clock and its control buttons */
 }
 .app-wrapper .header-container {
   grid-area: header;
@@ -172,13 +182,6 @@ button {
   justify-self: center;
   margin-top: 2rem;
 }
-.app-wrapper .clock-container {
-  grid-area: clock;
-  height: 10rem;
-  width: auto;
-  align-self: center;
-  justify-self: center;
-}
 .app-wrapper .word {
   grid-area: word;
   display: flex;
@@ -189,7 +192,7 @@ button {
 .app-wrapper .word .letters {
   padding: 0 1rem;
 }
-.app-wrapper .score-wrapper {
+.app-wrapper .win-or-lose-wrapper {
   grid-area: score;
   justify-self: center;
   align-self: flex-start;
@@ -215,11 +218,10 @@ button {
   align-self: center;
   justify-self: center;
 }
-.app-wrapper .get-score {
-  grid-area: getScore;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.app-wrapper .timer {
+  grid-area: stopwatch;
+  justify-self: center;
+  align-self: center;
 }
 
 /* A media query to make the page responsive by changing the layout from grid to flexbox below

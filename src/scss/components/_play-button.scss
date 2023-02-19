@@ -1,8 +1,7 @@
 @import '../abstract/variables';
 
 .play-button {
-  padding: 2.5rem 0;
-  width: 30rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 2rem;
   background: linear-gradient(145deg, $light-grey, $darker-grey);
 
@@ -12,11 +11,6 @@
 .reset-button {
   box-shadow: 1rem 1rem 3rem $dark-blue,
   -1rem -1rem 3rem $middle-blue;
-}
-
-.submit-guess_button {
-  box-shadow: 1rem 1rem 3rem $middle-blue,
-  -1rem -1rem 3rem $light-blue;
 }
 
 .btn-clock {

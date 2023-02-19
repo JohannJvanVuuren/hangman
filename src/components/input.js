@@ -1,15 +1,14 @@
 import '../scss/main.css';
 
-export const Input = ({placeHolderText}) => {
+export const Input = ({guess}) => {
 
 
 
 
     return (
         <div className={"guess-container"}>
-
-            <label>Guess a letter below</label>
-            <input className={"guess"} type={"text"} placeholder={placeHolderText} />
+            <h2>Enter a guess by pressing any letter</h2>
+            <div className={"guess"}>{guess}</div>
         </div>
     )
 }

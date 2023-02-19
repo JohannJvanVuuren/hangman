@@ -1,18 +1,3 @@
-Get a random word.
-Display the static page with empty div's as placeholders for the individual letters.
-Take in a letter from the input field (keydown event) and check if included in word.
-If included find indexes and place in first unoccupied index.
-If not place in incorrect letter array which must be displayed.
-Change hangman to next picture.
-Continue until hangman pictures are finished (?create an array).
-If all positions of word is filled give winning message.
-Display win/lose images.
+Synced components
+Help
 
-Words are predefined.
-Need array of incorrect letters (state)
-Need array of correct letters (state)
-Display correct letters in corresponding index numbers in random word
-Display incorrect numbers
-Need event listener for key code entred in inpput field.
-
-To display the word. We need the random word and the correct letters.

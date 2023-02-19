@@ -7,7 +7,7 @@ export const checkWinOrLose = (correctGuesses, incorrectGuesses, randomWord) => 
         }
     })
 
-    if (incorrectGuesses.length === 11) {
+    if (incorrectGuesses.length === 10) {
         winOrLose = 'lose';
     }
 

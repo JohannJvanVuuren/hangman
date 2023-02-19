@@ -5,10 +5,10 @@
   width: 100vw;
   height: 95vh;
   grid-template-areas:
-    "decorator header clock"
+    "decorator header stopwatch"
     "word word word"
     "score hangman incorrectGuesses"
-    "getScore guess reset";
+    "reset guess emptyCell";
   grid-template-rows: 1fr 5.5rem 1fr 12rem;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -30,15 +30,6 @@
     margin-top: 2rem;
   }
 
-  /* Spacing and aligning the clock container that houses the clock and its control buttons */
-  .clock-container {
-    grid-area: clock;
-    height: 10rem;
-    width: auto;
-    align-self: center;
-    justify-self: center;
-  }
-
   .word {
     grid-area: word;
     display: flex;
@@ -51,7 +42,7 @@
     }
   }
 
-  .score-wrapper {
+  .win-or-lose-wrapper {
     grid-area: score;
     justify-self: center;
     align-self: flex-start;
@@ -82,14 +73,11 @@
     justify-self: center;
   }
 
-  .get-score {
-    grid-area: getScore;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .timer {
+    grid-area: stopwatch;
+    justify-self: center;
+    align-self: center;
   }
-
-
 
 }
 
