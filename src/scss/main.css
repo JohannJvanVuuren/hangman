@@ -69,9 +69,18 @@ body {
   font-weight: bold;
 }
 
+ul {
+  list-style: inside;
+}
+ul li {
+  font-size: 1.6rem;
+}
+
 /* Colour palette */
 .guess-container h2 {
   color: #000014;
+  font-size: 1.8rem;
+  text-align: center;
 }
 .guess-container .guess {
   border-radius: 1.5rem;
@@ -112,6 +121,11 @@ button {
   border-radius: 1rem;
 }
 
+.modal-background .modal-content {
+  border-radius: 2rem;
+  background: linear-gradient(145deg, #9D9DFF, #4444c3);
+}
+
 /* Colour palette */
 .play-button {
   padding: 1.5rem 1.5rem;
@@ -120,12 +134,30 @@ button {
   border: none;
 }
 
+.help-button {
+  box-shadow: 1rem 1rem 3rem #4444c3, -1rem -1rem 3rem #9D9DFF !important;
+}
+
+.btn-close-modal {
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2), -0.5rem -0.5rem 3rem #CDCDCD;
+  width: 10rem;
+  height: 4rem;
+  margin: 0 1rem 1rem 0;
+}
+
 .reset-button {
   box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
 }
 
 .btn-clock {
   box-shadow: 5px 5px 15px #000014, -2px -2px 6px #9D9DFF;
+}
+
+Button {
+  width: 20rem;
+  height: 6rem;
+  align-self: center;
+  color: #000014 !important;
 }
 
 .digits {
@@ -162,7 +194,7 @@ button {
   display: grid;
   width: 100vw;
   height: 95vh;
-  grid-template-areas: "decorator header stopwatch" "word word word" "score hangman incorrectGuesses" "reset guess emptyCell";
+  grid-template-areas: "decorator header stopwatch" "word word word" "score hangman incorrectGuesses" "reset guess help";
   grid-template-rows: 1fr 5.5rem 1fr 12rem;
   grid-template-columns: 1fr 1fr 1fr;
   /* Spacing and aligning the header-container with the title in it  */
@@ -222,6 +254,11 @@ button {
   grid-area: stopwatch;
   justify-self: center;
   align-self: center;
+}
+.app-wrapper .help-button {
+  grid-area: help;
+  align-self: center;
+  justify-self: center;
 }
 
 /* A media query to make the page responsive by changing the layout from grid to flexbox below

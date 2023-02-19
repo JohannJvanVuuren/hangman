@@ -1,7 +1,7 @@
 import '../scss/main.css';
-import {useState, useEffect} from "react";
+import {useEffect} from "react";
 
-export const Stopwatch = ({isTimerActive, setIsTimerActive, time, setTime}) => {
+export const Stopwatch = ({isTimerActive, setIsTimerActive, time, setTime, timerPaused}) => {
 
     setIsTimerActive(false);
 
@@ -9,9 +9,9 @@ export const Stopwatch = ({isTimerActive, setIsTimerActive, time, setTime}) => {
 
         let interval;
 
-        if (isTimerActive === false) {
+        if (isTimerActive === false && timerPaused === false) {
             interval = setInterval(() => {
-                setTime(prevState => prevState + 10);
+                   setTime(prevState => prevState + 10);
             }, 10);
         } else {
             clearInterval(interval);
@@ -21,7 +21,9 @@ export const Stopwatch = ({isTimerActive, setIsTimerActive, time, setTime}) => {
             clearInterval(interval);
         }
 
-    }, [isTimerActive]);
+    }, [isTimerActive, timerPaused, setTime]);
+
+
 
     return (
         <div className={"timer"}>
@@ -29,11 +31,11 @@ export const Stopwatch = ({isTimerActive, setIsTimerActive, time, setTime}) => {
                 {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:
             </span>
             <span className="digits">
-                {("0" + Math.floor((time / 1000) % 60)).slice(-2)}.
+                {("0" + Math.floor((time / 1000) % 60)).slice(-2)}
             </span>
-            <span className="digits mili-sec">
-                {("0" + ((time / 10) % 100)).slice(-2)}
-            </span>
+            {/*<span className="digits mili-sec">*/}
+            {/*    {("0" + ((time / 10) % 100)).slice(-2)}*/}
+            {/*</span>*/}
         </div>
     )
 }

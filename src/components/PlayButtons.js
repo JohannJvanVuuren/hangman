@@ -4,6 +4,7 @@ export const StartResetButton = ({onStartResetGame}) => {
 
     return (
         <div className={"reset-game"}>
+
             <button
                 className={"play-button reset-button"}
                 type={"button"}

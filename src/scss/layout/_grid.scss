@@ -8,7 +8,7 @@
     "decorator header stopwatch"
     "word word word"
     "score hangman incorrectGuesses"
-    "reset guess emptyCell";
+    "reset guess help";
   grid-template-rows: 1fr 5.5rem 1fr 12rem;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -77,6 +77,12 @@
     grid-area: stopwatch;
     justify-self: center;
     align-self: center;
+  }
+
+  .help-button {
+    grid-area: help;
+    align-self: center;
+    justify-self: center;
   }
 
 }

@@ -10,6 +10,8 @@ import {HangmanImage} from "./components/HangmanImage";
 import {IncorrectGuesses} from "./components/IncorrectGuesses";
 import {WinOrLoseMessage} from "./components/WinOrLoseMessage";
 import {Stopwatch} from "./components/Stopwatch";
+import {Help} from "./components/Help";
+import Button from "react-bootstrap/Button";
 
 let randomWord = wordList[Math.floor(Math.random() * wordList.length) + 1];
 
@@ -21,7 +23,8 @@ export const App = () => {
     const [guess, setGuess] = useState('');
     const [isTimerActive, setIsTimerActive] = useState(false);
     const [time, setTime] = useState(0);
-
+    const [timerPaused, setTimerPaused] = useState(false);
+    const [modalShow, setModalShow] = useState(false);
 
     useEffect(() => {
         const inputKeydownHandler = (e) => {
@@ -41,12 +44,10 @@ export const App = () => {
                     }
                 }
             }
-
-
-
         }
 
         window.addEventListener('keydown', inputKeydownHandler);
+
 
 
         /* To ensure that there is only one event listener active during each rendering of the app. */
@@ -64,8 +65,17 @@ export const App = () => {
         setIncorrectGuesses([]);
         setGuess('');
         setIsTimerActive(true);
+        setTimerPaused(false);
         setTime(0);
         randomWord = wordList[Math.floor(Math.random() * wordList.length) + 1];
+    }
+    const openHelpModalHandler = () => {
+        setModalShow(true);
+    }
+
+    const closeHelpModalHandler = () => {
+        setModalShow(false);
+        setTime(0);
     }
 
     return (
@@ -99,6 +109,17 @@ export const App = () => {
                 setIsTimerActive={setIsTimerActive}
                 time={time}
                 setTime={setTime}
+                timerPaused={timerPaused}
+            />
+            <Button
+                className={"play-button help-button"}
+                onClick={openHelpModalHandler}
+            >
+                Help
+            </Button>
+            <Help
+                show={modalShow}
+                onHide={closeHelpModalHandler}
             />
         </div>
     );
