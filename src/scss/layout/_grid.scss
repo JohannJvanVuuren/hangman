@@ -1,103 +1,159 @@
+/* Import of color palette used in the media query */
+@import '../abstract/variables';
+
 /* Laying down the grid that houses the rest of the components. Named template areas are used so that it
  is easier to place specific components in specific spots.*/
 .app-wrapper {
   display: grid;
-  width: 100vw;
-  height: 95vh;
   grid-template-areas:
     "decorator header stopwatch"
     "word word word"
     "score hangman incorrectGuesses"
     "reset guess help";
-  grid-template-rows: 1fr 5.5rem 1fr 12rem;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 12rem;
+  height: 95vh;
+  width: 100vw;
 
-  /* Spacing and aligning the header-container with the title in it  */
+  /* Placing the header container in the grid and spacing it  */
   .header-container {
+    align-self: center;
     grid-area: header;
     justify-self: center;
-    align-self: center;
     margin-top: 2rem;
   }
 
-  /* Spacing and aligning the hangman classical image */
+  /* Placing the decorator/logo in the grid and spacing it */
   .decorator {
-    grid-area:  decorator;
-    height: 10rem;
-    width: 15rem;
     align-self: center;
+    grid-area: decorator;
+    height: 10rem;
     justify-self: center;
     margin-top: 2rem;
+    width: 15rem;
   }
 
+  /* Placing the random word in the grid and spacing it */
   .word {
-    grid-area: word;
+    align-self: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-area: word;
     height: 5rem;
+    justify-self: center;
 
+    /* Creating some space within the div's for the letters */
     .letters {
+      align-items: center;
+      display: flex;
+      justify-content: center;
       padding: 0 1rem;
     }
   }
 
+  /* Placing the win or lose message wrapper in the grid and spacing it */
   .win-or-lose-wrapper {
+    align-self: flex-start;
     grid-area: score;
     justify-self: center;
-    align-self: flex-start;
   }
 
+  /* Placing the hangman image in the grid and spacing it */
   .hangman-image {
+    align-self: center;
     grid-area: hangman;
     justify-self: center;
-    align-self: center;
   }
 
+  /* Placing the incorrect guess wrapper in the grid and spacing it */
   .incorrect-guess-wrapper {
-    grid-area: incorrectGuesses;
-    justify-self:center;
     align-self: flex-start;
-  }
-
-  .reset-game {
-    grid-area: reset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .guess-container {
-    grid-area: guess;
-    align-self: center;
+    grid-area: incorrectGuesses;
     justify-self: center;
   }
 
+  /* Placing the start/reset game button in the grid and spacing it */
+  .reset-game {
+    align-items: center;
+    display: flex;
+    grid-area: reset;
+    justify-content: center;
+  }
+
+  /* Placing the play instruction and current guess in the grid and spacing it */
+  .guess-container {
+    display: flex;
+    align-self: center;
+    grid-area: guess;
+    justify-self: center;
+
+    /* Spacing the current letter in the div */
+    .guess {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  /* Placing the stopwatch in the grid and spacing it */
   .timer {
+    align-self: center;
     grid-area: stopwatch;
     justify-self: center;
-    align-self: center;
   }
 
+  /* Placing the help button in the grid and spacing it */
   .help-button {
-    grid-area: help;
     align-self: center;
+    grid-area: help;
     justify-self: center;
   }
-
 }
 
 /* A media query to make the page responsive by changing the layout from grid to flexbox below
  widths of 570px. Components will then be stacked on top of each other.*/
 @media (max-width: 570px) {
-  .app-wrapper {
-    display: flex;
-    flex-direction: column;
+
+  /* Adjustments to the body to allow for responsive size and scrolling */
+  body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200vh;
+    width: 98vw;
   }
-}
 
-.letters {
-  display: flex;
+  /* Change to the layout of the grid */
+  .app-wrapper {
+    grid-template-areas:
+      "decorator"
+      "header"
+      "stopwatch"
+      "word"
+      "guess"
+      "hangman"
+      "incorrectGuesses"
+      "score"
+      "reset"
+      "help";
+    row-gap: 3rem;
 
+    /* Removal of the stopwatch from the display to save space */
+    .timer {
+      display: none;
+    }
+
+    /* Limiting the dimensions of the word container */
+    .word {
+      width: 100%;
+      margin: 0 5px;
+    }
+
+    /* Changing of the show of the help button to accommodate its new position on the page */
+    .help-button {
+      box-shadow: 1rem 1rem 3rem $mid-light-blue,
+    -2.5px -2.5px 3rem $light-blue !important;
+    }
+  }
 }
 

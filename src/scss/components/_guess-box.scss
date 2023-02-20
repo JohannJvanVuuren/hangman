@@ -1,16 +1,12 @@
+/* Import of the color palette used in this component */
 @import '../abstract/variables';
 
+/* Styling of the guess container that will show the current guessed character */
 .guess-container {
 
-  h2 {
-    color: $dark-blue;
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
   .guess {
-    border-radius: 1.5rem;
     background: linear-gradient(145deg, $light-blue, $middle-blue);
+    border-radius: 1.5rem;
     height: 5rem;
   }
 }

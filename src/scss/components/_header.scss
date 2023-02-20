@@ -1,28 +1,12 @@
 @import '../abstract/variables';
 
-/* Styling for the text header's container */
-.header-container,
-button {
-  border-radius: 2rem;
+/* Styling for the header's container */
+.header-container {
   background: linear-gradient(145deg, $light-grey, $darker-grey);
+  border: none;
+  border-radius: 2rem;
   box-shadow: 1rem 1rem 3rem $dark-blue,
   -1rem -1rem 3rem $middle-blue;
-  border: none;
+  padding-top: 1rem;
 }
 
-/* Styling of the clock container */
-.clock-container {
-
-  display: flex;
-  flex-direction: column;
-
-  h2 {
-    text-align: center;
-  }
-
-  button {
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-  }
-}

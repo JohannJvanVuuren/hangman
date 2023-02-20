@@ -1,3 +1,4 @@
+/* Import of the colour palette variables used in the typography of the app */
 @import '../abstract/variables';
 
 /* Styling for the header box's text */
@@ -11,54 +12,75 @@
 
   p {
     font-family: 'Lato', Arial, sans-serif;
-    font-weight: 700;
     font-size: 0.8rem;
-  }
-}
-
-.clock-container {
-  h2 {
-    font-size: 5rem;
-    font-weight: 100;
-    font-family: 'Lato', Arial, sans-serif;
-    color: $silver;
-  }
-
-  button {
     font-weight: 700;
-    font-family: "Rock Salt", Arial, sans-serif;
-    font-size: 1rem;
   }
 }
 
-.guess-container {
+/* Styling of the stopwatch characters */
+.timer {
 
-  label {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .guess {
+  .digits {
+    color: $dark-blue;
     font-family: "Rock Salt", Arial, sans-serif;
     font-size: 2rem;
-    color: $dark-blue;
-
-    &::placeholder {
-      color: $light-blue;
-    }
-
+    font-weight: 100;
+    letter-spacing: 0.7rem;
   }
 }
 
+/* Typography of the letters of the random word as they are guessed correctly */
+.letters {
+  color: $dark-blue;
+  font-size: 2rem;
+}
+
+/* Styling of the guess instructions and container of the current guess */
+.guess-container {
+
+  /* The instructions */
+  h2 {
+    color: $dark-blue;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* The current guess box */
+  .guess {
+    color: $dark-blue;
+    font-family: "Rock Salt", Arial, sans-serif;
+    font-size: 2rem;
+  }
+}
+
+/* Styling of all play buttons */
 .play-button {
   font-family: "Rock Salt", Arial, sans-serif;
   font-weight: bold;
 }
 
+/* Styling of the help list of instructions */
 ul {
   list-style: inside;
 
   li {
     font-size: 1.6rem;
+  }
+}
+
+/* Typography of the win or lose message that appears at the end of the game */
+.win-or-lose-wrapper {
+
+  h2,
+  h3{
+    color: $maroon;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
   }
 }

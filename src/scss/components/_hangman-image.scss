@@ -1,6 +1,9 @@
+/* Import of the color palette used in this component */
 @import '../abstract/variables';
 
+/* Styling of the hangman images used during game play */
 .hangman-image {
+
   img {
     border: 5px solid $middle-blue;
     border-radius: 2rem;

@@ -1,8 +1,8 @@
 /* Import of the Google Font "Lato" */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rock+Salt&display=swap");
 /* Import of the SCSS style modules */
-/* Colour palette */
-/* Colour palette */
+/* Colour palette used throughout the app */
+/* Colour palette used throughout the app */
 /* Global reset */
 *,
 ::after,
@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-/* Colour palette */
+/* Import of the colour palette variables used in the typography of the app */ /* Colour palette used throughout the app */
 /* Styling for the header box's text */
 .header-container h1 {
   font-size: 3.5rem;
@@ -35,40 +35,48 @@ body {
 }
 .header-container p {
   font-family: "Lato", Arial, sans-serif;
-  font-weight: 700;
   font-size: 0.8rem;
-}
-
-.clock-container h2 {
-  font-size: 5rem;
-  font-weight: 100;
-  font-family: "Lato", Arial, sans-serif;
-  color: #C0C0C0;
-}
-.clock-container button {
   font-weight: 700;
-  font-family: "Rock Salt", Arial, sans-serif;
-  font-size: 1rem;
 }
 
-.guess-container label {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.guess-container .guess {
+/* Styling of the stopwatch characters */
+.timer .digits {
+  color: #000014;
   font-family: "Rock Salt", Arial, sans-serif;
   font-size: 2rem;
-  color: #000014;
-}
-.guess-container .guess::placeholder {
-  color: #9D9DFF;
+  font-weight: 100;
+  letter-spacing: 0.7rem;
 }
 
+/* Typography of the letters of the random word as they are guessed correctly */
+.letters {
+  color: #000014;
+  font-size: 2rem;
+}
+
+/* Styling of the guess instructions and container of the current guess */
+.guess-container {
+  /* The instructions */
+  /* The current guess box */
+}
+.guess-container h2 {
+  color: #000014;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.guess-container .guess {
+  color: #000014;
+  font-family: "Rock Salt", Arial, sans-serif;
+  font-size: 2rem;
+}
+
+/* Styling of all play buttons */
 .play-button {
   font-family: "Rock Salt", Arial, sans-serif;
   font-weight: bold;
 }
 
+/* Styling of the help list of instructions */
 ul {
   list-style: inside;
 }
@@ -76,96 +84,7 @@ ul li {
   font-size: 1.6rem;
 }
 
-/* Colour palette */
-.guess-container h2 {
-  color: #000014;
-  font-size: 1.8rem;
-  text-align: center;
-}
-.guess-container .guess {
-  border-radius: 1.5rem;
-  background: linear-gradient(145deg, #9D9DFF, #1F1FBC);
-  height: 5rem;
-}
-
-/* Colour palette */
-.hangman-image img {
-  border: 5px solid #1F1FBC;
-  border-radius: 2rem;
-  box-shadow: 1rem 1rem 3rem #1F1FBC, -1rem -1rem 3rem #4444c3;
-  height: auto;
-  width: auto;
-}
-
-/* Colour palette */
-/* Styling for the text header's container */
-.header-container,
-button {
-  border-radius: 2rem;
-  background: linear-gradient(145deg, #CDCDCD, #ADADAD);
-  box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
-  border: none;
-}
-
-/* Styling of the clock container */
-.clock-container {
-  display: flex;
-  flex-direction: column;
-}
-.clock-container h2 {
-  text-align: center;
-}
-.clock-container button {
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.modal-background .modal-content {
-  border-radius: 2rem;
-  background: linear-gradient(145deg, #9D9DFF, #4444c3);
-}
-
-/* Colour palette */
-.play-button {
-  padding: 1.5rem 1.5rem;
-  border-radius: 2rem;
-  background: linear-gradient(145deg, #CDCDCD, #ADADAD);
-  border: none;
-}
-
-.help-button {
-  box-shadow: 1rem 1rem 3rem #4444c3, -1rem -1rem 3rem #9D9DFF !important;
-}
-
-.btn-close-modal {
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2), -0.5rem -0.5rem 3rem #CDCDCD;
-  width: 10rem;
-  height: 4rem;
-  margin: 0 1rem 1rem 0;
-}
-
-.reset-button {
-  box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
-}
-
-.btn-clock {
-  box-shadow: 5px 5px 15px #000014, -2px -2px 6px #9D9DFF;
-}
-
-Button {
-  width: 20rem;
-  height: 6rem;
-  align-self: center;
-  color: #000014 !important;
-}
-
-.digits {
-  font-size: 2rem;
-  letter-spacing: 1rem;
-}
-
-/* Colour palette */
+/* Typography of the win or lose message that appears at the end of the game */
 .win-or-lose-wrapper h2,
 .win-or-lose-wrapper h3 {
   color: #310101;
@@ -177,117 +96,220 @@ Button {
   font-size: 2rem;
 }
 
-/* Colour palette */
+/* Import of the color palette used in this component */ /* Colour palette used throughout the app */
+/* Styling of the guess container that will show the current guessed character */
+.guess-container .guess {
+  background: linear-gradient(145deg, #9D9DFF, #1F1FBC);
+  border-radius: 1.5rem;
+  height: 5rem;
+}
+
+/* Import of the color palette used in this component */ /* Colour palette used throughout the app */
+/* Styling of the hangman images used during game play */
+.hangman-image img {
+  border: 5px solid #1F1FBC;
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 3rem #1F1FBC, -1rem -1rem 3rem #4444c3;
+  height: auto;
+  width: auto;
+}
+
+/* Colour palette used throughout the app */
+/* Styling for the header's container */
+.header-container {
+  background: linear-gradient(145deg, #CDCDCD, #ADADAD);
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
+  padding-top: 1rem;
+}
+
+/* Import of the color palette used in this component */ /* Colour palette used throughout the app */
+/* Changing the style of the modal background from the react-bootstrap default styling */
+.modal-background .modal-content {
+  background: linear-gradient(145deg, #9D9DFF, #4444c3);
+  border-radius: 2rem;
+}
+
+/* Import of the color palette used in the play buttons */ /* Colour palette used throughout the app */
+/* Styling of the generic play-button class */
+.play-button {
+  background: linear-gradient(145deg, #CDCDCD, #ADADAD);
+  border: none;
+  border-radius: 2rem;
+  padding: 1.5rem 1.5rem;
+}
+
+/* Styling of the help button */
+.help-button {
+  box-shadow: 1rem 1rem 3rem #4444c3, -1rem -1rem 3rem #9D9DFF !important;
+}
+
+/* Styling of the button used to close the help modal */
+.btn-close-modal {
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2), -3px -3px 2rem #CDCDCD;
+  height: 4rem;
+  margin: 0 1rem 1rem 0;
+  width: 10rem;
+}
+
+/* Styling of the start/reset game button */
+.reset-button {
+  box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
+}
+
+/* Styling of the general button elements (common to all HTML button elements */
+Button {
+  color: #000014 !important;
+  height: 6rem;
+  width: 20rem;
+}
+
+/* Styling of the div containers for the letter of the random word */
 .letters {
   border: 0.6px dotted #000014;
-  margin: 0 0.5rem;
-  height: 4rem;
-  color: #000014;
   border-radius: 5px;
-  font-size: 2rem;
+  height: 4rem;
+  margin: 0 0.5rem;
   padding: 2rem;
 }
 
+/* Import of color palette used in the media query */ /* Colour palette used throughout the app */
 /* Laying down the grid that houses the rest of the components. Named template areas are used so that it
  is easier to place specific components in specific spots.*/
 .app-wrapper {
   display: grid;
-  width: 100vw;
-  height: 95vh;
   grid-template-areas: "decorator header stopwatch" "word word word" "score hangman incorrectGuesses" "reset guess help";
-  grid-template-rows: 1fr 5.5rem 1fr 12rem;
   grid-template-columns: 1fr 1fr 1fr;
-  /* Spacing and aligning the header-container with the title in it  */
-  /* Spacing and aligning the hangman classical image */
+  grid-template-rows: 1fr 1fr 1fr 12rem;
+  height: 95vh;
+  width: 100vw;
+  /* Placing the header container in the grid and spacing it  */
+  /* Placing the decorator/logo in the grid and spacing it */
+  /* Placing the random word in the grid and spacing it */
+  /* Placing the win or lose message wrapper in the grid and spacing it */
+  /* Placing the hangman image in the grid and spacing it */
+  /* Placing the incorrect guess wrapper in the grid and spacing it */
+  /* Placing the start/reset game button in the grid and spacing it */
+  /* Placing the play instruction and current guess in the grid and spacing it */
+  /* Placing the stopwatch in the grid and spacing it */
+  /* Placing the help button in the grid and spacing it */
 }
 .app-wrapper .header-container {
+  align-self: center;
   grid-area: header;
   justify-self: center;
-  align-self: center;
   margin-top: 2rem;
 }
 .app-wrapper .decorator {
+  align-self: center;
   grid-area: decorator;
   height: 10rem;
-  width: 15rem;
-  align-self: center;
   justify-self: center;
   margin-top: 2rem;
+  width: 15rem;
 }
 .app-wrapper .word {
-  grid-area: word;
+  align-self: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-area: word;
   height: 5rem;
+  justify-self: center;
+  /* Creating some space within the div's for the letters */
 }
 .app-wrapper .word .letters {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   padding: 0 1rem;
 }
 .app-wrapper .win-or-lose-wrapper {
+  align-self: flex-start;
   grid-area: score;
   justify-self: center;
-  align-self: flex-start;
 }
 .app-wrapper .hangman-image {
+  align-self: center;
   grid-area: hangman;
   justify-self: center;
-  align-self: center;
 }
 .app-wrapper .incorrect-guess-wrapper {
+  align-self: flex-start;
   grid-area: incorrectGuesses;
   justify-self: center;
-  align-self: flex-start;
 }
 .app-wrapper .reset-game {
-  grid-area: reset;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  grid-area: reset;
+  justify-content: center;
 }
 .app-wrapper .guess-container {
-  grid-area: guess;
+  display: flex;
   align-self: center;
+  grid-area: guess;
   justify-self: center;
+  /* Spacing the current letter in the div */
+}
+.app-wrapper .guess-container .guess {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .app-wrapper .timer {
+  align-self: center;
   grid-area: stopwatch;
   justify-self: center;
-  align-self: center;
 }
 .app-wrapper .help-button {
-  grid-area: help;
   align-self: center;
+  grid-area: help;
   justify-self: center;
 }
 
 /* A media query to make the page responsive by changing the layout from grid to flexbox below
  widths of 570px. Components will then be stacked on top of each other.*/
 @media (max-width: 570px) {
+  /* Adjustments to the body to allow for responsive size and scrolling */
+  body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200vh;
+    width: 98vw;
+  }
+  /* Change to the layout of the grid */
   .app-wrapper {
-    display: flex;
-    flex-direction: column;
+    grid-template-areas: "decorator" "header" "stopwatch" "word" "guess" "hangman" "incorrectGuesses" "score" "reset" "help";
+    row-gap: 3rem;
+    /* Removal of the stopwatch from the display to save space */
+    /* Limiting the dimensions of the word container */
+    /* Changing of the show of the help button to accommodate its new position on the page */
+  }
+  .app-wrapper .timer {
+    display: none;
+  }
+  .app-wrapper .word {
+    width: 100%;
+    margin: 0 5px;
+  }
+  .app-wrapper .help-button {
+    box-shadow: 1rem 1rem 3rem #4444c3, -2.5px -2.5px 3rem #9D9DFF !important;
   }
 }
-.letters {
-  display: flex;
-}
-
+/* Spacing and alignment of the game instruction and  box for current guess */
 .guess-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.guess-container label {
-  display: block;
-  text-align: center;
-}
 .guess-container .guess {
   width: 9rem;
   text-align: center;
 }
 
+/* Spacing and alignment of the content and dimensions of the header container */
 .header-container {
   width: 25rem;
   height: 10rem;

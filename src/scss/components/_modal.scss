@@ -1,4 +1,8 @@
+/* Import of the color palette used in this component */
+@import '../abstract/variables';
+
+/* Changing the style of the modal background from the react-bootstrap default styling */
 .modal-background .modal-content {
-  border-radius: 2rem;
   background: linear-gradient(145deg, $light-blue, $mid-light-blue);
+  border-radius: 2rem;
 }
