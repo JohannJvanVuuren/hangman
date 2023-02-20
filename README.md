@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Hangman v1.0.0 - Johann Jansen van Vuuren
+
+## Index
+
+1. Introduction
+2. Installation and Running
+3. Instructions
+4. Credits
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 1. Introduction
 
-In the project directory, you can run:
+This is a simple Hangman game that was written in React as an exercise in the Immersive Full Stack and Software Engineer Boot Camp at HyperionDev. It was one of the Capstone Projects where the purpose was to consolidate the knowledge of React basics and State Management.  
 
-### `yarn start`
+## 2. Installation and Running
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To install the application:  
+- Download the code from the repo at [Hangman v1.0.0 - Johann Jansen van Vuuren](https://github.com/JohannJvanVuuren/hangman)
+- Unzip the downloaded file
+- In the root of the project run the command `yarn install`
+- Once all the dependencies have been installed run the command `yarn start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 3. Instructions
 
-### `yarn test`
+The game is very easy to play:  
+- A random word will be generated at the start of the game
+- The player has 10 letters to guess the correct word
+- Each incorrect guess will result in a line being added to the hangman
+- When the hangman figure is completed the player loses
+- Each correct guess will be added the placeholders of the correct word
+- With each correct letter the word becomes easier to guess
+- When the word is completed before the hangman figure is completed the player wins
+- A message will appear in either of the two scenarios to notify the player that they have won or lost
+- During the game the player can click on the help button for instructions
+- The stopwatch will be rest when the player does so
+- During the game the player can reset the game by clicking on the start or reset game button
+- The player can also start a new game at the end of a game by clicking the same button
+- The stopwatch will reset and a new game will start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3.1 Beginning Of A Game
 
-### `yarn build`
+![Start](img_1.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3.2 A Game In Progress
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Mid-play](img_2.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3.3 The End Of A Winning Game
 
-### `yarn eject`
+![Win](img_3.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3.4 The End Of A Losing Game
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Lost](img_4.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 4. Credits
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This application was designed and created by Johann Jansen van Vuuren in February 2023.
