@@ -84,7 +84,7 @@ export const App = () => {
         setCorrectGuesses([]);
         setIncorrectGuesses([]);
         setGuess('');
-        setIsTimerActive(true);
+        setIsTimerActive(false);
         setTime(0);
         randomWord = wordList[Math.floor(Math.random() * wordList.length) + 1];
     }

@@ -40,7 +40,8 @@ body {
 }
 
 /* Styling of the stopwatch characters */
-.timer .digits {
+.timer .seconds,
+.timer .minutes {
   color: #000014;
   font-family: "Rock Salt", Arial, sans-serif;
   font-size: 2rem;
@@ -88,6 +89,7 @@ ul li {
 .win-or-lose-wrapper h2,
 .win-or-lose-wrapper h3 {
   color: #310101;
+  margin-left: 3rem;
 }
 .win-or-lose-wrapper h2 {
   font-size: 3rem;
@@ -155,6 +157,8 @@ ul li {
 
 /* Styling of the start/reset game button */
 .reset-button {
+  outline: 0 !important;
+  border: none;
   box-shadow: 1rem 1rem 3rem #000014, -1rem -1rem 3rem #1F1FBC;
 }
 

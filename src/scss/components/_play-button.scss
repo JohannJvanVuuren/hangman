@@ -26,6 +26,8 @@
 
 /* Styling of the start/reset game button */
 .reset-button {
+  outline: 0 !important;
+  border: none;
   box-shadow: 1rem 1rem 3rem $dark-blue,
   -1rem -1rem 3rem $middle-blue;
 }
