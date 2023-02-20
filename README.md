@@ -40,19 +40,19 @@ The game is very easy to play:
 
 ### 3.1 Beginning Of A Game
 
-![Start](img_1.png)
+![Start](readme-images/img_1.png)
 
 ### 3.2 A Game In Progress
 
-![Mid-play](img_2.png)
+![Mid-play](readme-images/img_2.png)
 
 ### 3.3 The End Of A Winning Game
 
-![Win](img_3.png)
+![Win](readme-images/img_3.png)
 
 ### 3.4 The End Of A Losing Game
 
-![Lost](img_4.png)
+![Lost](readme-images/img_4.png)
 
 ## 4. Credits
 
