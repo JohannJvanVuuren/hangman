@@ -23,9 +23,9 @@
   .seconds,
   .minutes{
     color: $dark-blue;
-    font-family: "Rock Salt", Arial, sans-serif;
-    font-size: 2rem;
-    font-weight: 100;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
     letter-spacing: 0.7rem;
   }
 }
@@ -34,6 +34,7 @@
 .letters {
   color: $dark-blue;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 /* Styling of the guess instructions and container of the current guess */
@@ -42,22 +43,28 @@
   /* The instructions */
   h2 {
     color: $dark-blue;
-    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
     text-align: center;
   }
 
   /* The current guess box */
   .guess {
     color: $dark-blue;
-    font-family: "Rock Salt", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     font-size: 2rem;
+    text-transform: uppercase;
   }
 }
 
 /* Styling of all play buttons */
 .play-button {
-  font-family: "Rock Salt", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
 }
 
 /* Styling of the help list of instructions */

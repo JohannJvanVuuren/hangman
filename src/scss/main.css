@@ -20,7 +20,7 @@ html {
 /* Setting global styles on the body element */
 body {
   background: linear-gradient(to bottom right, #000014, #1F1FBC, #9D9DFF);
-  font-family: "Rock Salt", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   height: 100vh;
   border: 1rem solid #FFFFFF;
   color: #000014;
@@ -43,9 +43,9 @@ body {
 .timer .seconds,
 .timer .minutes {
   color: #000014;
-  font-family: "Rock Salt", Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 100;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
   letter-spacing: 0.7rem;
 }
 
@@ -53,6 +53,7 @@ body {
 .letters {
   color: #000014;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 /* Styling of the guess instructions and container of the current guess */
@@ -62,19 +63,24 @@ body {
 }
 .guess-container h2 {
   color: #000014;
-  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2rem;
   text-align: center;
 }
 .guess-container .guess {
   color: #000014;
-  font-family: "Rock Salt", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 /* Styling of all play buttons */
 .play-button {
-  font-family: "Rock Salt", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 /* Styling of the help list of instructions */
